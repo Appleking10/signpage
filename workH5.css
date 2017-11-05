@@ -1,0 +1,188 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}	
+body,html{
+	width: 100%;
+	height: 100%;
+	font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+}
+body{
+	position: relative;
+	font-family:"Microsoft Yahei","kaiti";
+}
+@keyframes animatedBackground {
+ 	0% { background-position: center center; 
+ 	}
+
+ 	100% { background-position: center 100%;
+ 	}
+}
+@keyframes animatedBackground1 {
+ 	0% { background-position: center center; 
+ 	}
+
+ 	100% { background-position: center 200%;
+ 	}
+}
+@keyframes scanleBackground {
+	0% {
+		background-size: 100%;
+	}
+	100% {
+		background-size: 110%;
+	}
+}
+.attendanceForm {
+	animation-duration: 1.5s;
+	animation-delay: .8s;
+	/* animation-iteration-count: infinite; */
+  }
+.pages{
+	height: 100%;
+	width:100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	background:url(background.png) center center;
+	background-size: 120%;
+ 	background-repeat: repeat;
+	opacity: 0;
+	-webkit-transition:all .5s;
+	animation: animatedBackground1 5s linear infinite alternate;
+		 /*scanleBackground 5s linear infinite alternate;*/
+		/*background-repeat: no-repeat;*/
+}
+.pages:nth-of-type(1){
+	z-index: 10;	
+}
+.pageShow{
+	opacity: 1;
+	z-index: 10;
+	display: flex;
+	display: -webkit-flex;
+	background-size: 120%;
+}
+.logo{
+	position: fixed;
+	width: 24.9%;
+	height: 3.3%;
+	top: 3%;
+	left: 6%;
+}
+.pages{
+	display: -webkit-flex; 
+	display: flex;
+	display:-webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+	/* justify-content: center;  */
+	/* align-items: center; */
+	background-size: 100%;
+	animation: animatedBackground 5s linear infinite alternate;
+}
+
+
+.attendanceForm{
+	width: 78%;
+	height: 80%;
+	margin: 15% 11%;
+	border: 1.5px solid rgb(197, 197, 197);
+	background: #fff;
+	/* border-top: none;
+	border-bottom: none; */
+	border-radius: 5px;
+	display: flex;
+	display:-webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;	
+	z-index: 9;
+	position: absolute;
+}
+.attendanceForm>h1{
+	font-size:25px;
+	color: rgb(118, 178, 253);
+	line-height: 40px;
+	font-weight: normal;
+}
+.nameWrapper,.phoneWrapper {
+	width: 80%;
+	position: relative;
+	
+}
+.nameWrapper input,.phoneWrapper input {
+	width: 100%;
+	height:36px;
+	border: 1px solid rgb(197, 197, 197);
+	border-radius: 10px;
+	line-height: 24px;
+	font-size: 16px;
+	color: rgb(51, 51, 51);
+	text-indent: 10px;
+	outline-style: none;
+	box-shadow: 1px 1px 1px rgb(197, 197, 197) inset;
+	position: relative;
+}
+/* .nameWrapper{
+	margin-top: 20%; 
+} */
+.nameWrapper::after{
+	content: '* 姓名';
+	position: absolute;
+	left: 0;
+	top: -24px;
+	color: rgb(102,104,106);
+	font-size: 14px;
+	text-indent: 5px;
+	letter-spacing: 1px;
+	line-height: 14px;		
+}
+.infoWrapper{
+	text-align: center;
+	display: none;
+	font-size: 25px;
+	color: rgb(144, 152, 155);
+	letter-spacing: 1px;
+	line-height: 50px;
+	margin-top: 30%;
+}
+.infoWrapper h1{
+	font-weight: normal;
+	
+}
+.infoWrapper .infoNum{
+	color: rgb(118, 178, 253);
+	font-weight: bold;
+	font-size: 50px;
+}
+.warm {
+	display: block;
+	font-size: 12px;
+	color: rgb(51, 51, 51);
+	margin-left: 10px;
+
+}
+.attendBtn {
+	width: 95px;
+	height: 33px;
+	border: 1px solid rgb(118, 178, 253);
+	font-size: 16px;
+	border-radius: 15px;
+	font-weight: bold;
+}
+.attend{
+	color:#fff;
+	background: rgb(118, 178, 253);
+}
+.canelattend {
+	color: rgb(144, 152, 155);
+	background: #fff;
+	border: 1px solid rgb(144, 152, 155);
+}
